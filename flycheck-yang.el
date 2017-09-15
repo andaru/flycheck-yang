@@ -2,7 +2,7 @@
 ;; Copyright (c) 2016 Andrew Fort
 
 ;; Author: Andrew Fort (@andaru)
-;; Version: 0.0
+;; Version: 0.0.1
 ;; Package-Requires: ((yang-mode "0.9.4") (flycheck "0.18"))
 
 ;;; License:
