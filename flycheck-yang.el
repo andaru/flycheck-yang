@@ -3,7 +3,7 @@
 
 ;; Author: Andrew Fort (@andaru)
 ;; Version: 0.0
-;; Package-Requires: ((yang-mode "0") (flycheck "0.18"))
+;; Package-Requires: ((yang-mode "0.9.4") (flycheck "0.18"))
 
 ;;; Commentary:
 ;; This package configures provides YANG syntax checking via flycheck
@@ -28,6 +28,7 @@
 
 ;;; Code:
 
+(require 'yang-mode)
 (require 'flycheck)
 
 (defgroup flycheck-yang-pyang nil
