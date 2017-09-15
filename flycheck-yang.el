@@ -7,13 +7,13 @@
 
 ;;; Commentary:
 ;; This package configures provides YANG syntax checking via flycheck
-;; in emacs using the pyang YANG parser[1].
+;; in Emacs using the pyang YANG parser[1].
 ;;
 ;; [1] https://github.com/mbj4668/pyang
 
 ;;;; Setup
 ;;
-;; Add this to your emacs configuration:
+;; Add this to your Emacs configuration:
 ;;
 ;;   ;; autoload yang-mode for .yang files
 ;;   (autoload 'yang-mode "yang-mode" "Major mode for editing YANG modules." t)
