@@ -62,12 +62,19 @@
   :safe #'booleanp
   :group 'flycheck-yang-pyang)
 
+(defcustom flycheck-yang-path ""
+  ":-separated search path for yin and yang modules"
+  :type 'string
+  :safe #'stringp
+  :group 'flycheck-yang-pyang)
+
 (flycheck-define-checker yang-pyang
                          "A YANG syntax checker using the pyang parser."
                          :command ("pyang"
 				   "--max-identifier-length=60"
 				   (option-flag "-V" flycheck-yang-pyang-verbose)
 				   (option-flag "--ietf" flycheck-yang-pyang-ietf)
+				   (option "-p" flycheck-yang-path)
 				   source)
                          :error-patterns ((error line-start (file-name) ":"
                                                  line ": " "error: " (message) line-end)
