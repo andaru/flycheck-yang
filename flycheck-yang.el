@@ -53,11 +53,13 @@
 (defcustom flycheck-yang-pyang-verbose nil
   "Validate the module(s) according to IETF rules."
   :type 'boolean
+  :safe  #'booleanp
   :group 'flycheck-yang-pyang)
 
 (defcustom flycheck-yang-pyang-ietf nil
   "Enable ietf output from pyang."
   :type 'boolean
+  :safe #'booleanp
   :group 'flycheck-yang-pyang)
 
 (flycheck-define-checker yang-pyang
