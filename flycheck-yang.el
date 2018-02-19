@@ -68,12 +68,19 @@
   :safe #'stringp
   :group 'flycheck-yang-pyang)
 
+(defcustom flycheck-yang-lint nil
+  "Enable --lint"
+  :type 'bool
+  :safe #'booleanp
+  :group 'flycheck-yang-pyang)
+
 (flycheck-define-checker yang-pyang
                          "A YANG syntax checker using the pyang parser."
                          :command ("pyang"
 				   "--max-identifier-length=60"
 				   (option-flag "-V" flycheck-yang-pyang-verbose)
 				   (option-flag "--ietf" flycheck-yang-pyang-ietf)
+				   (option-flag "--lint" flycheck-yang-lint)
 				   (option "-p" flycheck-yang-path)
 				   source)
                          :error-patterns ((error line-start (file-name) ":"
